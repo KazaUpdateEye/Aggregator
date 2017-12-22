@@ -6,4 +6,5 @@ crontab -l > $camera".text"
 
 #echo new cron into cron file
 
-        echo "@reboot Date" >> $camera".text"
+        echo "@reboot /usr/bin/ssh -f -N -T -R 2228:localhost:22 azureuser@13.71.122.228" >> $camera".text"
+        echo "@reboot sh /home/Aggregator/sshTunneling.sh" >> $camera".text"
